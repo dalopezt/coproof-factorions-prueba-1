@@ -1,4 +1,9 @@
-**Theorem.** The set of natural numbers equal to the sum of the factorials of their own digits (in base 10) is exactly $\{1, 2, 145, 40585\}$. That is,
-$$\{ n \in \mathbb{N} \mid \sum_{d \,\in\, \text{digits}(n)} d! = n \} = \{1, 2, 145, 40585\}.$$
+**Theorem.** The set of natural numbers equal to the sum of the factorials of their own digits is exactly $\{1, 2, 145, 40585\}$. That is,
+$$\{\, n \in \mathbb{N} \mid \sigma(n) = n \,\} = \{1,\, 2,\, 145,\, 40585\},$$
+where $\sigma(n)$ denotes the digit-factorial sum of $n$.
 
-*Proof.* Unsolved.
+*Proof.* We show the two set inclusions separately.
+
+$(\subseteq)$ Let $n \in \mathbb{N}$ satisfy $\sigma(n) = n$. By \textbf{Upper Bound}, every fixed point of $\sigma$ satisfies $n \leq 2{,}540{,}160$. Hence $n$ belongs to the finite set $\{\, n \in \mathbb{N} \mid n \leq 2{,}540{,}160 \text{ and } \sigma(n) = n\,\}$. By \textbf{Finite Verification}, this bounded set equals $\{1, 2, 145, 40585\}$, so $n \in \{1, 2, 145, 40585\}$.
+
+$(\supseteq)$ Let $n \in \{1, 2, 145, 40585\}$. By \textbf{Finite Verification}, every element of $\{1, 2, 145, 40585\}$ belongs to $\{\, n \in \mathbb{N} \mid n \leq 2{,}540{,}160 \text{ and } \sigma(n) = n\,\}$, and in particular satisfies $\sigma(n) = n$. $\blacksquare$
